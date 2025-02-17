@@ -1,6 +1,6 @@
 environment:
   name: prod
-  project: cdf-bootcamp-04-prod # ex. cdf-bootcamp-01-prod
+  project: cdf-bootcamp-04-prod
   type: prod # prod, staging, dev, prod, qa
   selected:
   - modules/bootcamp/data_foundation
