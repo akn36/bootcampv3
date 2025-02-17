@@ -1,0 +1,4 @@
+externalId: assets-rest-destination
+credentials:
+  clientId: ${ICAPI_EXTRACTORS_CLIENT_ID}
+  clientSecret: ${ICAPI_EXTRACTORS_CLIENT_SECRET}

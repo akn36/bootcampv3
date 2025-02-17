@@ -1,2 +1,1 @@
-# bootcamp
-202410bootcamp
+# bootcamp-cdm-start-template
