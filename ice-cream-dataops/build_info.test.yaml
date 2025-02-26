@@ -246,10 +246,104 @@ modules:
     warning_count: 17
     status: Success
     iteration: 1
+  - name: data_foundation
+    location:
+      path: modules/bootcamp/data_foundation
+      hash: 39e207bb
+    build_variables:
+    - key: CDF_PROJECT
+      value: cdf-bootcamp-04-test
+      is_selected: true
+      location: modules/bootcamp
+    - key: IDP_CLIENT_ID
+      value: ${IDP_CLIENT_ID}
+      is_selected: true
+      location: modules/bootcamp
+    - key: IDP_CLIENT_SECRET
+      value: ${IDP_CLIENT_SECRET}
+      is_selected: true
+      location: modules/bootcamp
+    - key: IDP_TENANT_ID
+      value: ${IDP_TENANT_ID}
+      is_selected: true
+      location: modules/bootcamp
+    - key: CDF_URL
+      value: https://westeurope-1.cognitedata.com
+      is_selected: true
+      location: modules/bootcamp
+    - key: IDP_SCOPES
+      value: https://westeurope-1.cognitedata.com/.default
+      is_selected: true
+      location: modules/bootcamp
+    - key: IDP_TOKEN_URL
+      value: ${IDP_TOKEN_URL}
+      is_selected: true
+      location: modules/bootcamp
+    - key: data_developer_source_id
+      value: 0f713685-f7f4-4797-8eff-b860ee28bafc
+      is_selected: true
+      location: modules/bootcamp
+    - key: data_pipeline_oee_source_id
+      value: 37c3183e-8c2b-40b4-b7dd-e57705a745be
+      is_selected: true
+      location: modules/bootcamp
+    - key: readwrite_source_id
+      value: 998dae0b-1818-44d4-b1a6-adda41aa9fa8
+      is_selected: true
+      location: modules/bootcamp
+    - key: icapi_extractors_source_id
+      value: a8fc7678-c416-4d2a-a095-50e48503d189
+      is_selected: true
+      location: modules/bootcamp
+    - key: data_pipeline_oee_client_id
+      value: ${DATA_PIPELINE_OEE_CLIENT_ID}
+      is_selected: true
+      location: modules/bootcamp
+    - key: data_pipeline_oee_client_secret
+      value: ${DATA_PIPELINE_OEE_CLIENT_SECRET}
+      is_selected: true
+      location: modules/bootcamp
+    - key: icapi_extractors_client_id
+      value: ${ICAPI_EXTRACTORS_CLIENT_ID}
+      is_selected: true
+      location: modules/bootcamp
+    - key: icapi_extractors_client_secret
+      value: ${ICAPI_EXTRACTORS_CLIENT_SECRET}
+      is_selected: true
+      location: modules/bootcamp
+    - key: icapi_ds_external_id
+      value: ds_icapi
+      is_selected: true
+      location: modules/bootcamp
+    - key: icapi_space_name
+      value: icapi_dm_space
+      is_selected: true
+      location: modules/bootcamp
+    - key: oee_space_name
+      value: oee_ts_space
+      is_selected: true
+      location: modules/bootcamp
+    resources:
+      auth:
+      - identifier:
+          name: gp_admin_read_write
+        source:
+          path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/data_foundation/auth/admin.readwrite.group.yaml
+          hash: 26085f31
+        kind: Group
+      - identifier:
+          name: data_developer
+        source:
+          path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/data_foundation/auth/data_developer.yaml
+          hash: 77bd212a
+        kind: Group
+    warning_count: 0
+    status: Success
+    iteration: 1
   - name: oee
     location:
       path: modules/bootcamp/use_cases/oee
-      hash: 9c1648a9
+      hash: 696a97a8
     build_variables:
     - key: CDF_PROJECT
       value: cdf-bootcamp-04-test
@@ -347,14 +441,14 @@ modules:
           externalId: oee_timeseries
         source:
           path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/functions.Functions.yaml
-          hash: e5c9afd7
+          hash: d6bcc894
         kind: Function
       - identifier:
           functionExternalId: oee_timeseries
           name: Run calculations every 5 minutes for last hour of data
         source:
           path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/use_cases/oee/functions/schedules.Schedules.yaml
-          hash: e9523057
+          hash: 0cc26f4c
         kind: Schedule
       data_sets:
       - identifier:
@@ -363,100 +457,6 @@ modules:
           path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/use_cases/oee/data_sets/data_sets.yaml
           hash: c6e4eb0e
         kind: DataSet
-    warning_count: 0
-    status: Success
-    iteration: 1
-  - name: data_foundation
-    location:
-      path: modules/bootcamp/data_foundation
-      hash: 39e207bb
-    build_variables:
-    - key: CDF_PROJECT
-      value: cdf-bootcamp-04-test
-      is_selected: true
-      location: modules/bootcamp
-    - key: IDP_CLIENT_ID
-      value: ${IDP_CLIENT_ID}
-      is_selected: true
-      location: modules/bootcamp
-    - key: IDP_CLIENT_SECRET
-      value: ${IDP_CLIENT_SECRET}
-      is_selected: true
-      location: modules/bootcamp
-    - key: IDP_TENANT_ID
-      value: ${IDP_TENANT_ID}
-      is_selected: true
-      location: modules/bootcamp
-    - key: CDF_URL
-      value: https://westeurope-1.cognitedata.com
-      is_selected: true
-      location: modules/bootcamp
-    - key: IDP_SCOPES
-      value: https://westeurope-1.cognitedata.com/.default
-      is_selected: true
-      location: modules/bootcamp
-    - key: IDP_TOKEN_URL
-      value: ${IDP_TOKEN_URL}
-      is_selected: true
-      location: modules/bootcamp
-    - key: data_developer_source_id
-      value: 0f713685-f7f4-4797-8eff-b860ee28bafc
-      is_selected: true
-      location: modules/bootcamp
-    - key: data_pipeline_oee_source_id
-      value: 37c3183e-8c2b-40b4-b7dd-e57705a745be
-      is_selected: true
-      location: modules/bootcamp
-    - key: readwrite_source_id
-      value: 998dae0b-1818-44d4-b1a6-adda41aa9fa8
-      is_selected: true
-      location: modules/bootcamp
-    - key: icapi_extractors_source_id
-      value: a8fc7678-c416-4d2a-a095-50e48503d189
-      is_selected: true
-      location: modules/bootcamp
-    - key: data_pipeline_oee_client_id
-      value: ${DATA_PIPELINE_OEE_CLIENT_ID}
-      is_selected: true
-      location: modules/bootcamp
-    - key: data_pipeline_oee_client_secret
-      value: ${DATA_PIPELINE_OEE_CLIENT_SECRET}
-      is_selected: true
-      location: modules/bootcamp
-    - key: icapi_extractors_client_id
-      value: ${ICAPI_EXTRACTORS_CLIENT_ID}
-      is_selected: true
-      location: modules/bootcamp
-    - key: icapi_extractors_client_secret
-      value: ${ICAPI_EXTRACTORS_CLIENT_SECRET}
-      is_selected: true
-      location: modules/bootcamp
-    - key: icapi_ds_external_id
-      value: ds_icapi
-      is_selected: true
-      location: modules/bootcamp
-    - key: icapi_space_name
-      value: icapi_dm_space
-      is_selected: true
-      location: modules/bootcamp
-    - key: oee_space_name
-      value: oee_ts_space
-      is_selected: true
-      location: modules/bootcamp
-    resources:
-      auth:
-      - identifier:
-          name: gp_admin_read_write
-        source:
-          path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/data_foundation/auth/admin.readwrite.group.yaml
-          hash: 26085f31
-        kind: Group
-      - identifier:
-          name: data_developer
-        source:
-          path: /home/user/workspace/bootcampv3/ice-cream-dataops/modules/bootcamp/data_foundation/auth/data_developer.yaml
-          hash: 77bd212a
-        kind: Group
     warning_count: 0
     status: Success
     iteration: 1
