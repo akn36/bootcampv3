@@ -44,7 +44,7 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Cognite Toolkit
         run: pip install cognite-toolkit==${{ env.TOOLKIT_VERSION }}
-      - name: Build Toolkit verify authentication
+      #- name: Build Toolkit verify authentication
         #run: cdf-tk auth verify -np
       - name: Build Toolkit Configurations
         run: cdf-tk build --env=${{ matrix.environment }}
