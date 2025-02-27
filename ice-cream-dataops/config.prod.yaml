@@ -22,8 +22,8 @@ variables:
       # OBJECT ID FOR prod/prod Groups
       data_developer_source_id: ff435c95-65d7-4494-a2fc-4f1daa13a9e7 # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
       data_pipeline_oee_source_id: d3a6fc9a-f907-463b-bfb4-f64acb12bd05 # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
-      readwrite_source_id: 9eb707ec8-f369-438f-8508-754c2a7eeb6d  # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
-      icapi_extractors_source_id: 0f713685-f7f4-4797-8eff-b860ee28bafc # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+      readwrite_source_id: eb707ec8-f369-438f-8508-754c2a7eeb6d  # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
+      icapi_extractors_source_id: c6119ad5-bfe0-4779-9ee4-e78614c8729e # ex. xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx
 
       # Client Ids (App registrations or Service Principals)
       data_pipeline_oee_client_id: ${DATA_PIPELINE_OEE_CLIENT_ID} # replaced by .env
